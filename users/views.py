@@ -1,10 +1,17 @@
-# Django
-from django.contrib.auth.decorators import login_required
+"""Users views."""
 
-from django.contrib.auth import authenticate, login
+# Django
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 
-# Create your views here.
+# Exception
+from django.db.utils import IntegrityError
+
+# Models
+from django.contrib.auth.models import User
+from users.models import Profile
+
 
 def login_view(request):
     """Login view."""
@@ -16,15 +23,9 @@ def login_view(request):
             login(request, user)
             return redirect('home')
         else:
-            return render(request, '/users/login.html', {'error': 'Invalid username and password'})
+            return render(request, 'users/login.html', {'error': 'Invalid username and password'})
 
-    return render(request, '/users/login')
-
-@login_required
-def logout_view(request):
-    """Logout a user."""
-    logout(request)
-    return redirect('login')
+    return render(request, 'users/login.html')
 
 
 def signup(request):
@@ -53,3 +54,10 @@ def signup(request):
         return redirect('login')
 
     return render(request, 'users/signup.html')
+
+
+@login_required
+def logout_view(request):
+    """Logout a user."""
+    logout(request)
+    return redirect('login')

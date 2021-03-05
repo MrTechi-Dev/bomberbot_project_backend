@@ -7,5 +7,10 @@
 </head>
 <body>
     Hola Gracias por hacer log in
+
+    <form action="{% url 'logout' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary btn-block mt-5">logout</button>
+    </form>
 </body>
 </html>

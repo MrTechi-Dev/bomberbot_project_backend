@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block head_content %}{% endblock %}
+
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+
+<script async src='/cdn-cgi/bm/cv/669835187/api.js'></script></head>
+<body>
+
+    {% include "nav.html" %}
+
+    <div class="container mt-5">
+        {% block container %}
+        {% endblock%}
+    </div>
+
+<script type="text/javascript">(function(){window['__CF$cv$params']={r:'62b619a9f86ef257',m:'7b2a1a2a51d8e475cde86f4177650373b94f82e0-1614976206-1800-ARFIqPU4LQ031HIvA+RbnH50E6vC0xNrTQMA85yhcHPiLtExjH/EpfqGe412/0CfEwpCHEEgBgfiknlic0VSRJdL4TZsbeLBzRWpXL8vKWGKtiFp6jDOeebRt8Mw849xEkb7ST+w/8DXC+zRfJxMXXx+HLlCip1jSq+Yi+UCYwn42ybO1xX2yKm03caJ280b7Rke3gGhihKkoqy5kkgx8N4=',s:[0x0eb4a6685b,0xeb16087225],}})();</script></body>
+</html>

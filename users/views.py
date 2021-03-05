@@ -14,17 +14,17 @@ def login_view(request):
         user = authenticate(request, username=username, password=password)
         if user:
             login(request, user)
-            return redirect('home/home')
+            return redirect('home')
         else:
-            return render(request, 'users/login.html', {'error': 'Invalid username and password'})
+            return render(request, '/users/login.html', {'error': 'Invalid username and password'})
 
-    return render(request, 'users/login.html')
+    return render(request, '/users/login')
 
 @login_required
 def logout_view(request):
     """Logout a user."""
     logout(request)
-    return redirect('users/login')
+    return redirect('login')
 
 
 def signup(request):
@@ -52,4 +52,4 @@ def signup(request):
 
         return redirect('login')
 
-    return render(request, 'users/signup.html'
+    return render(request, 'users/signup.html')

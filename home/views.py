@@ -10,4 +10,4 @@ from datetime import datetime
 @login_required
 def home(request):
     """List existing posts."""
-    return render(request, 'home/home.html')
+    return render(request, 'home')

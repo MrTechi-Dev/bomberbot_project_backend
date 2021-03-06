@@ -10,7 +10,10 @@ from django.db.utils import IntegrityError
 
 # Models
 from django.contrib.auth.models import User
-from users.models import Profile
+
+# Restframework Django
+from rest_framework.decorators import api_view
+
 
 
 def login_view(request):
@@ -47,9 +50,6 @@ def signup(request):
         user.last_name = request.POST['last_name']
         user.email = request.POST['email']
         user.save()
-
-        profile = Profile(user=user)
-        profile.save()
 
         return redirect('login')
 

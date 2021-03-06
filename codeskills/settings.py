@@ -2,7 +2,7 @@
 Django settings for codeskills project.
 
 """
-
+from django.urls import include, path
 from pathlib import Path
 import os
 
@@ -39,14 +39,17 @@ INSTALLED_APPS = [
 
     #Local apps
     'users',
-    'home',
 ]
 
-# REST_FRAMEWORK = {
-#     'DEFAULT_AUTHENTICATION_CLASSES': [
-#         'rest_framework_authentication.TokenAuthentication',
-#     ],
-# }
+# JWT stand for JSON Web Token and it is an authentication strategy
+# used by client/server applications where the client is a Web application
+# using some frontend framework like Angular, React or VueJS.
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -63,9 +66,7 @@ ROOT_URLCONF = 'codeskills.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            os.path.join(BASE_DIR, 'templates')
-        ],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -134,7 +135,3 @@ STATICFILES_DIRS = (
 )
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-
-LOGIN_URL = 'users/login'
-
-LOGOUT_REDIRECT_URL = LOGIN_URL

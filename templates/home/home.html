@@ -12,5 +12,9 @@
         {% csrf_token %}
         <button type="submit" class="btn btn-primary btn-block mt-5">logout</button>
     </form>
+    <form action="{% url 'editor' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary btn-block mt-5">editor</button>
+    </form>
 </body>
 </html>

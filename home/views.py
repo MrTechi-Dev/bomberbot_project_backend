@@ -11,3 +11,8 @@ from datetime import datetime
 def home(request):
     """List existing posts."""
     return render(request, 'home/home.html')
+
+@login_required
+def editor(request):
+    """ Editor view """
+    return render(request, 'home/editor.html')

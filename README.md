@@ -1,9 +1,9 @@
 # CodeSkills Code Editor
 _FullStack Web Application utility for Bomberbot code learniing platform, to help students all over world to learn to code, with User functinality and code text editor_
 
-__For more information check our landing page [here]()_
+_For more information check our landing page [here]()_
 
-##Begining:
+### Begining:
 _Clon this repository using the following command._
 
 ```
@@ -27,7 +27,7 @@ pip3 install -r requirements.txt
  ```
  python3 -m venv venv
  ```
- _ And then:_
+ _And then:_
  ```
  source venv/bin/activate
  ```
@@ -43,7 +43,7 @@ pip3 install -r requirements.txt
  ```
  python3 manage.py runserver
  ```
-_3. This will open a server in your localhosat at :_
+_3. This will open a server in your localhos  at:_
 ```
 http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
@@ -59,7 +59,7 @@ _Current version: 1.0_
 
 ## Authors 
 * **Diana Sofia  Garcia Caicedo** *Backend Developer* - [Sofiag8](https://github.com/Sofiag8)
-* **Andres Barrera Pulido** *Backend Developer* - [Andres802](https://github.com/Andres802)
+* **Andres Barrera Pulido** *Backend Developer - DevOps* - [Andres802](https://github.com/Andres802)
 * **Steffany Naranjo Vargas** *FrontEnd Developer* - [steffanynaranjov](https://github.com/steffanynaranjov)
 * **Nick Arshadi** *Frontend Developer* - [nickarshadi](https://github.com/nickarshadi)
 

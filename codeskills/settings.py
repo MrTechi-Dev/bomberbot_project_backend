@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     # Third-Party Apps
     'rest_framework',
     'rest_framework.authtoken',
+    'django_rest_passwordreset',
 
     #Local apps
     'users',
@@ -135,3 +136,5 @@ STATICFILES_DIRS = (
 )
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

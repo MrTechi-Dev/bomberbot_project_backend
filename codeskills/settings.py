@@ -7,7 +7,7 @@ from pathlib import Path
 import os
 
 # Heroku
-import django-heroku
+import django_heroku
 import dj_database_url
 
 

@@ -17,6 +17,11 @@ https://github.com/Andres802/bomberbot_project_backend.git
  * codemirror2
  * Django REST framework
 
+#### _Backend_
+_Using the [requirements.txt](https://github.com/Andres802/bomberbot_project_backend/blob/development/requeriments.txt) install the prerequisites technogies needed for backend functionality_
+```
+pip3 install -r requirements.txt
+```
  ### Installation:
  _After clonning the backend repo into your local create a virtual enviroment with following command:_
  ```

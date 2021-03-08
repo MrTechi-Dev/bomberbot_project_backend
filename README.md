@@ -1,5 +1,5 @@
 # CodeSkills Code Editor
-_FullStack Web Application utility for Bomberbot code learniing platform, to help students all over world to learn to code, with User functinality and code text editor
+_FullStack Web Application utility for Bomberbot code learniing platform, to help students all over world to learn to code, with User functinality and code text editor_
 
 __For more information check our landing page [here]()_
 

@@ -93,8 +93,11 @@ WSGI_APPLICATION = 'codeskills.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'users',
+        'USER': 'codeskills',
+        'PASSWORD': 'root',
+        'HOST': 'localhost' 
     }
 }
 

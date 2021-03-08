@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'codeskills',
+    'corsheaders',
     
     # Third-Party Apps
     'rest_framework',
@@ -45,6 +46,7 @@ INSTALLED_APPS = [
     #Local apps
     'users',
 ]
+CORS_ORIGIN_ALLOW_ALL = True
 
 # JWT stand for JSON Web Token and it is an authentication strategy
 # used by client/server applications where the client is a Web application
@@ -65,6 +67,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'codeskills.urls'

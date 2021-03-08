@@ -18,27 +18,27 @@ https://github.com/Andres802/bomberbot_project_backend.git
  * Django REST framework
 
  ### Installation:
- _After clonning the backend repo into your local create a virtual enviroment with following command:
+ _After clonning the backend repo into your local create a virtual enviroment with following command:_
  ```
  python3 -m venv venv
  ```
- _ And then:
+ _ And then:_
  ```
  source venv/bin/activate
  ```
- _ Use the following command if you want to deactivate the virtual environment:
+ _Use the following command if you want to deactivate the virtual environment:_
  ```
  deactivate
  ```
- 1_Install Django framework:
+ _1. Install Django framework:_
  ```
  pip install django -U
  ```
- 2_Once everything is install run the following command to run the development server:
+ _2. Once everything is install run the following command to run the development server:_
  ```
  python3 manage.py runserver
  ```
-3_This will open a server in your localhosat at :
+_3. This will open a server in your localhosat at :_
 ```
 http://127.0.0.1:8000/
 Quit the server with CONTROL-C.

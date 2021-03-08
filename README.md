@@ -16,6 +16,7 @@ https://github.com/Andres802/bomberbot_project_backend.git
  * css
  * codemirror2
  * Django REST framework
+ * Heroku
 
 #### _Backend_
 _Using the [requirements.txt](https://github.com/Andres802/bomberbot_project_backend/blob/development/requeriments.txt) install the prerequisites technogies needed for backend functionality_

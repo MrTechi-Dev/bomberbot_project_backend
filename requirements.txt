@@ -16,3 +16,4 @@ gunicorn
 django-heroku
 psycopg2
 dj-database-url
+whitenoise

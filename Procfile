@@ -1,3 +1,3 @@
 release: python manage.py migrate
-web: gunicorn core.wsgi --log-file -
+web: gunicorn codeskills.wsgi --log-file -
 

@@ -9,6 +9,7 @@ from django.contrib.auth.models import update_last_login
 from django.contrib.auth import authenticate
 
 
+
 class LoginSerializer(serializers.Serializer):
     """ Serializer for Login view """
     username = serializers.CharField(max_length=100)
@@ -47,14 +48,11 @@ class SignupSerializer(serializers.ModelSerializer):
     """ Serializer User Signup """
     class Meta:
         model = User
-        fields = (
-            'username', 
-            'password', 
-            'password', 
-            'first_name', 
-            'last_name', 
-            'email'
-        )
+        fields = ['username', 'password', 'password', 'first_name', 'last_name', 'email']
+        
+        extra_kwargs = {'first_name': {'required': True, 'allow_blank': False}}
+        extra_kwargs = {'last_name': {'required': True,'allow_blank': False}}
+        extra_kwargs = {'email': {'required': True,'allow_blank': False}}
     
     def create(self, validated_data):
         """ 

@@ -18,6 +18,7 @@ from rest_framework import status
 # Password
 from .serializers import ChangePasswordSerializer
 
+
 class UserLogin(APIView):
     serializer_class = LoginSerializer
     permission_classes = (AllowAny,)
@@ -105,4 +106,5 @@ class ChangePasswordView(generics.UpdateAPIView):
             return Response(response)
 
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-    
+
+
